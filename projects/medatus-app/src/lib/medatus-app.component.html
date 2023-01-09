@@ -1,0 +1,44 @@
+<h2> Medatus Button demo page </h2>
+<nz-table nzBordered="true">
+  <thead>
+    <tr>
+      <th>Rest</th>
+      <th>Hover</th>
+      <th>Pressed</th>
+      <th>Disabled</th>
+      <th>Focus</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let size of sizes;  index as i;" >
+      <td>
+        <button nz-button nzType="primary" nzShape="round"  nzGhost="false"
+        [ngClass]=" 0 == i%2 ? 'rest': 'restnomal'" [nzSize]="size">
+          <span nz-icon nzType="star" nzTheme="fill"></span>Button
+        </button>
+      </td>
+      <td>
+        <button nz-button nzType="primary" nzShape="round"
+        [ngClass]=" 0 == i%2 ? 'hover' : 'hovernormal'"  [nzSize]="size">
+          <span nz-icon nzType="star" nzTheme="fill"></span>Button
+        </button>
+      </td>
+      <td>
+        <button nz-button nzType="primary" class="nzclicked"
+        [ngClass]=" 0 == i%2 ? 'pressed' : 'pressednormal'"  nzShape="round"
+        [nzSize]="size">
+          <span nz-icon nzType="star" nzTheme="fill"></span>Button
+        </button>
+      </td>
+      <td> <button nz-button nzType="primary" nzShape="round" disabled="true" [nzSize]="size">
+          <span nz-icon nzType="star" nzTheme="fill"></span>Button
+        </button> </td>
+      <td>
+        <button nz-button nzType="dashed" nzShape="round" 
+        [ngClass]=" 0 == i%2 ? 'focus' : 'focusnormal'" [nzSize]="size">
+          <span nz-icon nzType="star" nzTheme="fill"></span>Button
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
